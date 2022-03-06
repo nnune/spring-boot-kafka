@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: Spring Kafka Sample
+  profiles:
+    active: dev
+  config:
+    use-legacy-processing: true
+server:
+  port: 8080
+  compression:
+    enabled: true
+  http2:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, metrics, prometheus, jolokia
+  metrics:
+    export:
+      prometheus:
+        enabled: true
